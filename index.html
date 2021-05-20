@@ -16,7 +16,7 @@
     <!-- <h1>{{ age * 2 }}</h1>
     <h1>{{ age > 60 ? 'Old' : "Young" }}</h1>
     <h1>{{ name.split(' ')[0] }}</h1> -->
-    <h1>{{ getFullName(firstName, lastName) }}</h1>
+    <h1>{{ getFullName(firstName, lastName).name }}</h1>
   </div>
 
   <!-- Vue js  -->
@@ -35,7 +35,10 @@
       methods: { // methods is func in obj(in this case obj is Vue instance)
         getFullName: function(first, last) {
           // return this.firstName + ' ' + this.lastName;
-          return `${first} ${last}`;
+          // return `${first} ${last}`; or return obj: 
+          return {
+            name: `${first} ${last}`
+          }
         }
       }
     });
