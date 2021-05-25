@@ -15,7 +15,7 @@
 
 <body>
   <div id="app">
-    <button v-on:click="clickedButton">Click!</button>
+    <button v-on:click="clickedButton('Hello World', $event)">Click!</button>
   </div>
 
   <!-- Vue js  -->
@@ -25,8 +25,10 @@
     new Vue({
       el: '#app',
       methods: {
-        clickedButton: function () {
-          alert("Clicked!");
+        clickedButton: function (msg, event) {
+          console.log("EVENT: ",
+            event); //MouseEvent {isTrusted: true, screenX: 35, screenY: 1199, clientX: 35, clientY: 20, …}
+          alert(msg);
         }
       }
     });
