@@ -12,7 +12,9 @@
 <body>
   <div id="app">
     <!-- <input type="text" v-on:keyup.enter="pressedEnter">  OR we can use numbers : 13 => enter -->
-    <input type="text" v-on:keyup.13="pressedEnter">
+    <!-- <input type="text" v-on:keyup.13="pressedEnter"> -->
+
+    <input type="text" v-on:keyup.enter.space="somethingNew">
   </div>
 
   <!-- Vue js  -->
@@ -22,8 +24,8 @@
     new Vue({
       el: '#app',
       methods: {
-        pressedEnter: function () {
-          alert("You Pressed Enter");
+        somethingNew: function () {
+          alert("You Pressed Enter or Space key");
         }
       }
     });
