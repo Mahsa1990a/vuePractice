@@ -11,7 +11,8 @@
 
 <body>
   <div id="app">
-    <input type="text" v-on:keyup.enter="pressedEnter">
+    <!-- <input type="text" v-on:keyup.enter="pressedEnter">  OR we can use numbers : 13 => enter -->
+    <input type="text" v-on:keyup.13="pressedEnter">
   </div>
 
   <!-- Vue js  -->
