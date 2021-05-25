@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script type="text/javascript" src="index.js"></script> -->
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-on:keyup.shift.enter="myListener">
+  </div>
+
+  <!-- Vue js  -->
+  <script src="vue.js"></script>
+  <!-- App js -->
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+      methods: {
+        myListener: function () {
+          alert("You Pressed Shift + Enter key");
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
