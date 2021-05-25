@@ -12,7 +12,7 @@
 <body>
   <div id="app">
     <div v-on:click="showDialog">
-      <button v-on:click="showDialog">Click Here!</button>
+      <button v-on:click.stop="showDialog">Click Here!</button>
     </div>
   </div>
 
