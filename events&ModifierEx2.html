@@ -28,8 +28,8 @@
     <br><br>
 
     <!-- EXERCISE 3: Prevent the below form from submitting. 
-    Hint: Prevent the "submit" event on the form. -->
-    <form action="" method="GET">
+    Hint: Prevent the "submit" event on the form. so we should add v-on to the form not input: -->
+    <form action="" method="GET" v-on:submit.prevent>
       <input type="submit" value="Submit">
     </form>
   </div>
