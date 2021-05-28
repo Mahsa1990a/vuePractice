@@ -22,7 +22,7 @@
     <!-- EXERCISE 2: Make the below text input update the data property from 
     exercise 1, but only when pressing the Control + Enter keys. 
     Hint: The key modifier for the Control key is named "ctrl" -->
-    <input type="text">
+    <input type="text" v-on:keyup.ctrl.enter="name = $event.target.value">
     Output: {{ name }}
 
     <br><br>
