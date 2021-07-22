@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script type="text/javascript" src="index.js"></script> -->
-  <title>Document</title>
-</head>
+  <body>
+    <div id="app">
+      <!-- EXERCISE 1: Make the below text input update a data property on every 
+      "keyup" event. Also output the data property.
+      Hint: event.target.value gives access to input value. -->
+      <input type="text" v-on:keyup="nameKeyUp" />
+      Output: {{ name }}
 
-<body>
-  <div id="app">
-    <!-- EXERCISE 1: Make the below text input update a data property on every 
-    "keyup" event. Also output the data property.
-    Hint: event.target.value gives access to input value. -->
-    <input type="text" v-on:keyup='nameKeyUp'>
-    Output: {{ name }}
+      <br /><br />
 
-    <br><br>
+      <!-- EXERCISE 2: Make the below text input update the data property from 
+      exercise 1, but only when pressing the Control + Enter keys. 
+      Hint: The key modifier for the Control key is named "ctrl" -->
 
-    <!-- EXERCISE 2: Make the below text input update the data property from 
-    exercise 1, but only when pressing the Control + Enter keys. 
-    Hint: The key modifier for the Control key is named "ctrl" -->
-    <input type="text" v-on:keyup.ctrl.enter="name = $event.target.value">
-    Output: {{ name }}
+      <!-- will update input after press cntrl+enter// You can use this or craete method and pass it here like line 17-->
+      <input type="text" v-on:keyup.ctrl.enter="name = $event.target.value" />
+      Output: {{ name }}
 
-    <br><br>
+      <br /><br />
 
-    <!-- EXERCISE 3: Prevent the below form from submitting. 
-    Hint: Prevent the "submit" event on the form. so we should add v-on to the form not input: -->
-    <form action="" method="GET" v-on:submit.prevent>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+      <!-- EXERCISE 3: Prevent the below form from submitting. 
+      Hint: Prevent the "submit" event on the form. so we should add v-on to the form not input: -->
+      <form action="" method="GET" v-on:submit.prevent>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
 
-  <!-- Vue js  -->
-  <script src="vue.js"></script>
-  <!-- App js -->
-  <script type="text/javascript">
-    new Vue({
-      el: '#app',
-      data: {
-        name: ''
-      },
-      methods: {
-        nameKeyUp: function (event) {
-          this.name = event.target.value; // we can access the input value by this: (event.target.value)
-        }
-      }
-    });
-  </script>
-</body>
-
+    <!-- Vue js  -->
+    <script src="vue.js"></script>
+    <!-- App js -->
+    <script type="text/javascript">
+      new Vue({
+        el: '#app',
+        data: {
+          name: '',
+        },
+        methods: {
+          nameKeyUp: function (event) {
+            this.name = event.target.value; // we can access the input value by this: (event.target.value)
+          },
+        },
+      });
+    </script>
+  </body>
 </html>
